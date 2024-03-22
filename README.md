@@ -1,2 +1,1 @@
-# cv_texttoimage_geneai
-Research based project on  text to image generation
+Make sure to download the COCO 2017 train dataset and load it to ./images/train2017
