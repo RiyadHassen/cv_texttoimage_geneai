@@ -1,48 +1,23 @@
-# DreamBooth
+# Textual Inversion
 
-DreamBooth is a powerful tool designed for generating personalized images based on text prompts. It utilizes a text-to-image diffusion model coupled with class-specific prior preservation loss to generate diverse instances of a specific subject based on textual descriptions.
+Textual Inversion is a novel approach to generating personalized images based on text prompts. It employs an innovative text-to-image inversion technique to synthesize images that correspond to specific textual descriptions. It enable language-guided generation of new, user-specified concepts. To do so, it uses  to encode these concepts into an intermediate representation of a pre-trained text-to-image model. Ideally, this should be done in a manner that would allow us to leverage the rich semantic and visual prior represented by such a model, and use it to guide intuitive visual transformations of the concepts.
 
-**Note:**
-DreamBooth is very sensitive to training hyperparameters, and it is easy to overfit. DreamBooth offers a novel approach to personalized text-to-image generation but requires careful parameter tuning and evaluation to achieve optimal results. Adjusting hyperparameters, such as λ, is crucial to balance fidelity and diversity while avoiding overfitting.
-
-
-## Problem Statement
-
-Large text-to-image models have demonstrated exceptional performance in generating realistic images based on textual descriptions. However, existing models often fail to accurately mimic the appearance of subjects in a given reference set and synthesize novel renditions of the same subject in different contexts. DreamBooth aims to address this limitation by offering a personalized approach to text-to-image generation, allowing users to embed specific subjects into different scenes based on textual prompts.
 
 ## Method
 
-DreamBooth leverages an autogenous technique, incorporating class-specific prior preservation loss to encourage the generation of diverse instances belonging to the subject's class. Here's an overview of the method:
+Textual Inversion employs a sophisticated inversion algorithm to generate images based on textual prompts. Here's an overview of the method:
 
-1. **Input**: DreamBooth takes a set of specific subjects without textual descriptions as input. You can use image data set from 
-https://github.com/google/dreambooth. You can also use your data image to train this generic text-to-image model. 
+1. **Input**: Textual Inversion takes textual description 3-5 images as input, which serve as prompts for image generation.
 
-2. **Objective**: The objective is to generate new images with high fidelity and variations guided by text prompts.
+2. **Objective**: The objective is to generate images that accurately reflect the textual descriptions provided as input.
 
-3. **Text-to-Image Generation**: DreamBooth utilizes a text-to-image diffusion model, pairing input images with text prompts containing unique identifiers and the name of the class to which the subject belongs.
+3. **Text-to-Image Inversion**: Textual Inversion utilizes an inversion algorithm to reverse-engineer images from textual descriptions. This process involves decoding the textual features and mapping them to corresponding visual features.
 
-4. **Prior Preservation Loss**: A parallel class-specific prior preservation loss is applied to leverage the semantic prior of the model on the class. This encourages the generation of diverse instances belonging to the subject's class mentioned in the prompt.
-
-5. **Loss Function**: The loss function incorporates both reconstruction loss and prior preservation loss. The latter supervises the model with its own generated images, controlled by a parameter λ.
+4. **Loss Function**: The loss function guides the inversion process, ensuring that the generated images closely match the textual descriptions provided as input.
 
 ## Execution
 
-To execute DreamBooth, follow these general directions:
+To execute Textual Inversion, follow these general directions:
 
-1. **Setup Environment**: Ensure you have the required dependencies and a suitable environment set up to run DreamBooth. You can use Google-colab with GPU  or any 
-other GPU supported machine to train this model execute the model. 
+You can use the notebook to textual inversion model you can change dataset of your own. 
 
-2. **Input Data**: Prepare a set of specific subjects without textual descriptions.
-
-3. **Text Prompt**: Provide a text prompt containing a unique identifier and the name of the class to which the subject belongs.
-
-4. **Model Execution**: Run the DreamBooth model, which will generate personalized images based on the provided input data and text prompts.
-
-5. **Parameter Tuning**: Experiment with different hyperparameters, including λ, to achieve desired results while avoiding overfitting.
-
-6. **Evaluation**: Evaluate the generated images based on fidelity, diversity, and adherence to the provided text prompts.
-
-7. **Iterative Refinement**: Iterate the process, adjusting parameters and input data as needed to improve the quality of generated images.
-
-If you are using Hugging Face's DreamBooth, consider the following training notes:
-- **Link** https://huggingface.co/docs/diffusers/en/training/dreambooth
