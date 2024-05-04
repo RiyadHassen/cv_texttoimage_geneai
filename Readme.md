@@ -45,17 +45,4 @@ other GPU supported machine to train this model execute the model.
 7. **Iterative Refinement**: Iterate the process, adjusting parameters and input data as needed to improve the quality of generated images.
 
 If you are using Hugging Face's DreamBooth, consider the following training notes:
-
-- **Data Preparation**: Ensure your training data is well-prepared and diverse to capture a wide range of subject appearances and contexts.
-
-- **Model Configuration**: Experiment with different model architectures and hyperparameters to find the optimal configuration for your specific use case.
-
-- **Training Duration**: Train the model for an appropriate duration, balancing between model convergence and computational resources.
-
-- **Monitoring**: Continuously monitor the training process, including loss metrics and image quality, to identify potential issues and adjust training settings accordingly.
-
-- **Regularization**: Apply regularization techniques, such as dropout or weight decay, to prevent overfitting and improve generalization performance.
-
-- **Fine-Tuning**: Consider fine-tuning the pre-trained DreamBooth model on domain-specific data or tasks to further enhance its performance.
-
 - **Link** https://huggingface.co/docs/diffusers/en/training/dreambooth
