@@ -57,3 +57,5 @@ If you are using Hugging Face's DreamBooth, consider the following training note
 - **Regularization**: Apply regularization techniques, such as dropout or weight decay, to prevent overfitting and improve generalization performance.
 
 - **Fine-Tuning**: Consider fine-tuning the pre-trained DreamBooth model on domain-specific data or tasks to further enhance its performance.
+
+- **Link** https://huggingface.co/docs/diffusers/en/training/dreambooth
