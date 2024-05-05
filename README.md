@@ -65,4 +65,10 @@ The implementation of this text-to-image alignment tool is based on the methods 
 This tool leverages the concepts and methodologies developed in this paper, particularly focusing on improving the alignment between complex text prompts and the generated images using a decompositional approach and iterative VQA feedback.
 
 
+@inproceedings{singh2023divide,
+  title={Divide, Evaluate, and Refine: Evaluating and Improving Text-to-Image Alignment with Iterative VQA Feedback},
+  author={Singh, Jaskirat and Zheng, Liang},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023}
+}
 
