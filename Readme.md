@@ -21,3 +21,7 @@ To execute Textual Inversion, follow these general directions:
 
 You can use the notebook to textual inversion model you can change dataset of your own. 
 
+## Cite
+
+https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/sd_textual_inversion_training.ipynb#scrollTo=quqOxtEaVj4Z
+
