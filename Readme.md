@@ -46,3 +46,6 @@ other GPU supported machine to train this model execute the model.
 
 If you are using Hugging Face's DreamBooth, consider the following training notes:
 - **Link** https://huggingface.co/docs/diffusers/en/training/dreambooth
+
+## Cite
+https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb
